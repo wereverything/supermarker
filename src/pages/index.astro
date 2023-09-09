@@ -1,0 +1,56 @@
+---
+import LayoutContainer from "../layout/layout.astro";
+import HeaderComponent from "../components/header.astro";
+import CarouselItem from "../components/carousel.astro"
+---
+
+<LayoutContainer>
+  <!-- HEADER CONTAINER COMPONENT -->
+  <main class="main-body-container w-[100%] h-[100%] min-h-screen font-nuni">
+    <HeaderComponent />
+    <div
+      class="carousel-container-fruits absolute top-0 left-0 w-full h-full overflow-hidden [&>div]:w-full [&>div]:h-full [&>div]:flex [&>div]:items-center [&>div]:justify-between [&>div]:text-white"
+    >
+    <CarouselItem
+      itemBg="#72a860",
+      colorFruit="#fedf48",
+      fruit="lemon",
+      imageFruit="https://www.chb.gr/siteAssets/markets/Lemon.png"
+    />
+    <CarouselItem
+      itemBg="#ff494a",
+      colorFruit="#651d1d",
+      fruit="Strawberry",
+      imageFruit="https://www.chb.gr/siteAssets/markets/Strawberry.png"
+    />
+    <CarouselItem
+      itemBg="#ffdf53",
+      colorFruit="#655821",
+      fruit="Banana",
+      imageFruit="https://sicarfarms.com/wp-content/uploads/2021/01/Platano.png"
+    />
+    <CarouselItem
+      itemBg="#fc8605",
+      colorFruit="#ffc905",
+      fruit="Orange",
+      imageFruit="https://www.fervalle.com/wp-content/uploads/2022/07/transparent-orange-apple5eacfeae85ac29.7815306015883956945475-300x300.png"
+    />
+    <CarouselItem
+      itemBg="#a77a38",
+      colorFruit="#ffd055",
+      fruit="Pineapple",
+      imageFruit="https://sicarfarms.com/wp-content/uploads/2021/01/Pineapple.png"
+    />
+    <div class="container-buttons bottom-0 top-[17rem] px-20 text-xl [&>button]:flex [&>button]:items-center [&>button]:justify-center [&>button]:px-10 [&>button]:py-2 flex flex-row absolute z-30">
+        <button class="border-2 border-white rounded-full" id="previousPage">
+          <ion-icon name="chevron-back-outline"></ion-icon>
+        </button>
+        <button class="bg-[#fff] rounded-full text-black" id="nextPage">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </button>
+      </div>
+    </div>
+  </main>
+  <!-- IMPORT SCRIPT OF JAVASCRIPT -->
+  <script src="../scripts/script.js"></script>
+</LayoutContainer>

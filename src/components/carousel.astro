@@ -1,0 +1,20 @@
+---
+const {itemBg, colorFruit, fruit, imageFruit} = Astro.props
+---
+
+<div class=`carousel-item bg-[${itemBg}] px-20` style=`background-color: ${itemBg};`>
+    <div class="carousel-title font-nuni italic text-7xl uppercase flex flex-col gap-10">
+      <div class="titles">
+        <span>Freshly</span><br />
+        <span class=`text-[${colorFruit}] font-bold pr-6` style=`color: ${colorFruit};`>{fruit}</span>
+        <span>Juice<br /><b>Real</b></span>
+      </div>
+    </div>
+    <div class="carousel-image">
+      <img
+        src={imageFruit}
+        alt={fruit}
+        class="w-[30rem]"
+      />
+    </div>
+  </div>
